@@ -24,11 +24,9 @@ export class AppComponent implements OnInit {
    }
 
   ngOnInit() {      
-    //this.printReceipt();
-  }
-
-  public printReceipt() {
-    console.log('Ya se termino de cargar');
-    window.print();
+    setTimeout(() => {
+      window.print();
+      console.log('Ya se termino de cargar');
+    }, 4000);
   }
 }
