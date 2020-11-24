@@ -1,56 +1,59 @@
 <div id="loader"></div>
 <div id="invoice-POS" style="display:none;" class="animate-bottom">
-  <div id="top">
-    <!--div class="logo"></div-->
-    <div class="info">
-      <h2>Tiendas Homex</h2>
+  <div id='print'>
+    <div id="top">
+      <!--div class="logo"></div-->
+      <div class="info">
+        <h2>Tiendas Homex</h2>
+      </div>
+    </div>
+  
+    <div id="mid">
+      <div class="info"></div>
+      <!--h3>Informacion</h3-->
+      <p>
+        Direccion: xxxxxxxxxxxxxxxx
+        <br>
+        Correo: xxxxxxx@xxxx.com
+        <br>
+        Telefono: xxxx-xxxx
+      </p>
+    </div>
+  
+    <div id="bot">
+      <table>
+        <tr class="tabletitle">
+          <td class="item">Producto</td>
+          <td class="Hours">Cantidad</td>
+          <td class="Rate">Sub Total</td>
+        </tr>
+  
+        <ng-container *ngFor='let item of receipt'>
+          <tr class="service">
+            <td class="tableitem" *ngIf='item'><p class="itemtext">{{ item.id }}</p></td>
+            <td class="tableitem" *ngIf='item'><p class="itemtext">{{ item.description }}</p></td>
+            <td class="tableitem" *ngIf='item'><p class="itemtext">{{ item.name }}</p></td>
+          </tr>
+        </ng-container>
+  
+        <tr class="tabletitle footer">
+          <td></td>
+          <td class="Rate"><h2>IVA</h2></td>
+          <td class="payment"><h2>$419.25</h2></td>
+        </tr>
+  
+        <tr class="tabletitle footer">
+          <td></td>
+          <td class="Rate"><h2>Total</h2></td>
+          <td class="payment"><h2>$3,644.25</h2></td>
+        </tr>
+      </table>
+    </div>
+  
+    <div id="legalcopy">
+      <p class="legal"><strong>Gracias por comprar en Tiendas Homex!</strong>  Que tenga un bello dia. 
+      </p>
     </div>
   </div>
-
-  <div id="mid">
-    <div class="info"></div>
-    <!--h3>Informacion</h3-->
-    <p>
-      Direccion: xxxxxxxxxxxxxxxx
-      <br>
-      Correo: xxxxxxx@xxxx.com
-      <br>
-      Telefono: xxxx-xxxx
-    </p>
-  </div>
-
-  <div id="bot">
-    <table>
-      <tr class="tabletitle">
-        <td class="item">Producto</td>
-        <td class="Hours">Cantidad</td>
-        <td class="Rate">Sub Total</td>
-      </tr>
-
-      <ng-container *ngFor='let item of receipt'>
-        <tr class="service">
-          <td class="tableitem" *ngIf='item'><p class="itemtext">{{ item.id }}</p></td>
-          <td class="tableitem" *ngIf='item'><p class="itemtext">{{ item.description }}</p></td>
-          <td class="tableitem" *ngIf='item'><p class="itemtext">{{ item.name }}</p></td>
-        </tr>
-      </ng-container>
-
-      <tr class="tabletitle footer">
-        <td></td>
-        <td class="Rate"><h2>IVA</h2></td>
-        <td class="payment"><h2>$419.25</h2></td>
-      </tr>
-
-      <tr class="tabletitle footer">
-        <td></td>
-        <td class="Rate"><h2>Total</h2></td>
-        <td class="payment"><h2>$3,644.25</h2></td>
-      </tr>
-    </table>
-  </div>
-
-  <div id="legalcopy">
-    <p class="legal"><strong>Gracias por comprar en Tiendas Homex!</strong>  Que tenga un bello dia. 
-    </p>
-  </div>
+  <button class="noprint" (click)="printReceipt()">Imprimir</button>
 </div>

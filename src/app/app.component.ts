@@ -12,16 +12,23 @@ export class AppComponent implements OnInit {
   receipt = [];
 
   constructor(private http: HttpClient) { 
-    this.http.get('https://northwind.now.sh/api/categories').toPromise().then(data => {
+    this.http.get(this.url).toPromise().then(data => {
       for (let key in data) {
         if (data.hasOwnProperty(key)) {
           this.receipt.push(data[key]);
         }
       }
     });
+
+    console.log(this.receipt);
    }
 
   ngOnInit() {      
-    console.log(this.receipt);
+    //this.printReceipt();
+  }
+
+  public printReceipt() {
+    console.log('Ya se termino de cargar');
+    window.print();
   }
 }
