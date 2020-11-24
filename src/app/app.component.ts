@@ -22,7 +22,6 @@ export class AppComponent implements OnInit {
    }
 
   ngOnInit() {      
-    // Simple GET request with response type <any>
     console.log(this.receipt);
   }
 }
