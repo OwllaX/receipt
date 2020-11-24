@@ -38,9 +38,9 @@
     /*min-height: 100px;*/
     text-align: center;
 }
-#invoice-POS #mid {
-    /*min-height: 80px;*/
-}
+/*#invoice-POS #mid {
+    min-height: 80px;
+}*/
 #invoice-POS #bot {
     min-height: 50px;
 }
@@ -78,6 +78,7 @@
 #invoice-POS .tabletitle {
     font-size: 0.5em;
     background: #eee;
+    text-align: center;
 }
 #invoice-POS .service {
     border-bottom: 1px solid #eee;
