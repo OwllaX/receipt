@@ -35,21 +35,24 @@
     border-bottom: 1px solid #eee;
 }
 #invoice-POS #top {
-    min-height: 100px;
-    align-items: center;
+    /*min-height: 100px;*/
+    text-align: center;
 }
 #invoice-POS #mid {
-    min-height: 80px;
+    /*min-height: 80px;*/
 }
 #invoice-POS #bot {
     min-height: 50px;
 }
-#invoice-POS #top .logo {
-    height: 60px;
-    width: 60px;
+/*#invoice-POS #top .logo {
+    height: 30px;
+    width: 50%;
     background: url(http://michaeltruong.ca/images/logo1.png) no-repeat;
-    background-size: 60px 60px;
-}
+    background-size: 30px 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}*/
 #invoice-POS .clientlogo {
     float: left;
     height: 60px;
@@ -79,9 +82,9 @@
 #invoice-POS .service {
     border-bottom: 1px solid #eee;
 }
-#invoice-POS .item {
+/*#invoice-POS .item {
     width: 24mm;
-}
+}*/
 #invoice-POS .itemtext {
     font-size: 0.5em;
 }
