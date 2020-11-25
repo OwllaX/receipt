@@ -1,0 +1,33 @@
+[
+    {
+        "InvoiceID" : "",
+        "Client" : "",
+        "Payment" : "",
+        "SalesOrder" : [
+            {
+                "ItemID" : "MTIDHI01",
+                "Price" : 800,
+                "Quantity" : 4,
+                "Tax" : 0.13
+            },
+            {
+                "ItemID" : "MTMSGR124",
+                "Price" : 2700,
+                "Quantity" : 2,
+                "Tax" : 0.13
+            },
+            {
+                "ItemID" : "MTMSGR125",
+                "Price" : 9800,
+                "Quantity" : 1,
+                "Tax" : 0.13
+            },
+            {
+                "ItemID" : "MTMSGR02",
+                "Price" : 900,
+                "Quantity" : 1,
+                "Tax" : 0.01
+            }
+        ]
+    }
+]
