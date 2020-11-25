@@ -90,9 +90,9 @@
     /*min-height: 100px;*/
     text-align: center;
 }
-/*#invoice-POS #mid {
-    min-height: 80px;
-}*/
+#invoice-POS #mid {
+    font-size: small;
+}
 #invoice-POS #bot {
     min-height: 50px;
 }

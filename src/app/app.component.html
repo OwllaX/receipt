@@ -8,7 +8,7 @@
   </div>
 
   <div id="mid">
-    <div class="info"></div>
+    <div class="info company"></div>
     <!--h3>Informacion</h3-->
     <p>
       Direccion: xxxxxxxxxxxxxxxx
@@ -19,32 +19,48 @@
     </p>
   </div>
 
+  <div id="mid">
+    <div class="info customer"></div>
+    <!--h3>Informacion</h3-->
+    <p *ngIf="finalTest">
+      Factura: {{finalTest.InvoiceID}}
+      <br>
+      Cliente: {{finalTest.Client}}
+      <br>
+      Metodo Pago: {{finalTest.Payment}}
+    </p>
+  </div>
+
   <div id="bot">
     <table>
       <tr class="tabletitle">
         <td class="item">Producto</td>
         <td class="Hours">Cantidad</td>
+        <td class="Tax">IVA</td>
         <td class="Rate">Sub Total</td>
       </tr>
 
-      <ng-container *ngFor='let item of receipt'>
+      <ng-container *ngFor='let item of salesOrder'>
         <tr class="service">
-          <td class="tableitem" *ngIf='item'><p class="itemtext">{{ item.id }}</p></td>
-          <td class="tableitem" *ngIf='item'><p class="itemtext">{{ item.description }}</p></td>
-          <td class="tableitem" *ngIf='item'><p class="itemtext">{{ item.name }}</p></td>
+          <td class="tableitem" *ngIf='item'><p class="itemtext">{{ item.ItemID }}</p></td>
+          <td class="tableitem" *ngIf='item'><p class="itemtext">{{ item.Quantity }}</p></td>
+          <td class="tableitem" *ngIf='item'><p class="itemtext">{{ item.Tax * 100 + '%' }}</p></td>
+          <td class="tableitem" *ngIf='item'><p class="itemtext">{{ '₡' + item.Price * item.Quantity }}</p></td>
         </tr>
       </ng-container>
 
       <tr class="tabletitle footer">
         <td></td>
-        <td class="Rate"><h2>IVA</h2></td>
-        <td class="payment"><h2>$419.25</h2></td>
+        <td></td>
+        <td class="Rate"><h2>Total IVA</h2></td>
+        <td class="payment"><h2>{{'₡' + totalTax}}</h2></td>
       </tr>
 
       <tr class="tabletitle footer">
         <td></td>
+        <td></td>
         <td class="Rate"><h2>Total</h2></td>
-        <td class="payment"><h2>$3,644.25</h2></td>
+        <td class="payment"><h2>{{'₡' + total}}</h2></td>
       </tr>
     </table>
   </div>

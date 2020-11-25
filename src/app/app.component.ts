@@ -11,6 +11,8 @@ export class AppComponent implements OnInit {
   title = 'receipt'
   url = 'https://northwind.now.sh/api/categories';
   receipt = [];
+  salesOrder = [];
+  finalTest = test[0];
 
   total : number = 0.00;
   totalTax : number = 0.00;
@@ -25,9 +27,7 @@ export class AppComponent implements OnInit {
     });
 
     console.log(this.receipt);
-
-    console.log(test);
-
+    
     this.getTotalTax();
    }
 
@@ -38,25 +38,22 @@ export class AppComponent implements OnInit {
     }, 4000);*/
   }
 
-  getTotal() {
-    
-  }
-
   getTotalTax() {
-    let salesOrder = [];
     let Tax : number = 0.00;
-    for (let key in test[0].SalesOrder) {
-      if(test[0].SalesOrder.hasOwnProperty(key))
-        salesOrder.push(test[0].SalesOrder)
+    for (let key in this.finalTest.SalesOrder) {
+      if(this.finalTest.SalesOrder.hasOwnProperty(key))
+        this.salesOrder.push(this.finalTest.SalesOrder)
     }
 
-    /*for (let key in salesOrder) {
-      if (salesOrder.hasOwnProperty.call(key)) {
-        console.log(salesOrder[key]);
-        this.totalTax += (salesOrder[key].Price * salesOrder[key].Quantity) * salesOrder[key].Tax;
-      }
+    this.salesOrder = this.salesOrder[0];
 
-      console.log(this.totalTax);
-    }*/
+    for (let key in this.salesOrder) {
+      if (this.salesOrder.hasOwnProperty(key)) {
+          this.totalTax += (this.salesOrder[key].Price * this.salesOrder[key].Quantity) * this.salesOrder[key].Tax;
+          this.total += (this.salesOrder[key].Price * this.salesOrder[key].Quantity) + this.totalTax;
+      }
+    }
+
+    console.log(this.total);
   }
 }
