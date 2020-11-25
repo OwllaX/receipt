@@ -6,24 +6,28 @@
         "SalesOrder" : [
             {
                 "ItemID" : "MTIDHI01",
+                "Name" : "IDEAL Papel Higienico",
                 "Price" : 800,
                 "Quantity" : 4,
                 "Tax" : 0.13
             },
             {
                 "ItemID" : "MTMSGR124",
+                "Name" : "Ahorro PACK Basico",
                 "Price" : 2700,
                 "Quantity" : 2,
                 "Tax" : 0.13
             },
             {
                 "ItemID" : "MTMSGR125",
+                "Name" : "Ahorro Pack Completo",
                 "Price" : 9800,
                 "Quantity" : 1,
                 "Tax" : 0.13
             },
             {
                 "ItemID" : "MTMSGR02",
+                "Name" : "MiSabor Arroz 90% Grano Entero",
                 "Price" : 900,
                 "Quantity" : 1,
                 "Tax" : 0.01

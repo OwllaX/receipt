@@ -54,6 +54,6 @@ export class AppComponent implements OnInit {
       }
     }
 
-    console.log(this.total);
+    console.log(this.salesOrder);
   }
 }
