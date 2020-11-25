@@ -1,8 +1,8 @@
 [
     {
-        "InvoiceID" : "",
-        "Client" : "",
-        "Payment" : "",
+        "InvoiceID" : "4856321156",
+        "Client" : "MIMO000",
+        "Payment" : "Tarjeta",
         "SalesOrder" : [
             {
                 "ItemID" : "MTIDHI01",
