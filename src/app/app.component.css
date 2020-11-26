@@ -82,7 +82,7 @@
     color: #666;
     line-height: 1.2em;
 }
-#invoice-POS #top, #invoice-POS #mid, #invoice-POS #bot {
+#invoice-POS #mid, #invoice-POS #bot {
    /* Targets all id with 'col-' */
     border-bottom: 1px solid #eee;
 }
@@ -91,7 +91,7 @@
     text-align: center;
 }
 #invoice-POS #mid {
-    font-size: small;
+    font-size: 0.7em;
 }
 #invoice-POS #bot {
     min-height: 50px;
@@ -128,11 +128,17 @@
     border-collapse: collapse;
 }
 #invoice-POS .tabletitle {
-    font-size: 0.5em;
+    font-size: 0.4em;
+    background: #eee;
+    text-align: center;
+}
+#invoice-POS .tabletitle.footer {
+    font-size: 0.43em;
     background: #eee;
     text-align: center;
 }
 #invoice-POS .service {
+    font-size: 0.55em;
     border-bottom: 1px solid #eee;
 }
 /*#invoice-POS .item {
@@ -142,5 +148,6 @@
     font-size: 0.5em;
 }
 #invoice-POS #legalcopy {
-    margin-top: 5mm;
+    margin-top: 3mm;
+    font-size: 0.7em;
 }
